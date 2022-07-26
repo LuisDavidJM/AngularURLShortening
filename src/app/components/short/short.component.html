@@ -1,0 +1,14 @@
+<div id="container">
+    <div id="search">
+        <input type="text" placeholder="Shorten a link here..." [(ngModel)]="link" (keyup.enter)="showLink()">
+        <button type="submit">Shorten It!</button>
+    </div>
+    <p id="alert">Please add a link</p>
+</div>
+<div *ngIf="shortLink" id="container-link">
+    <div class="cont-link">
+        <p>{{shortLink.original_link}}</p>
+        <p><a href="{{shortLink.full_short_link}}" target="_blank">{{shortLink.short_link}}</a></p>
+        <button>Copy</button>
+    </div>
+</div>
