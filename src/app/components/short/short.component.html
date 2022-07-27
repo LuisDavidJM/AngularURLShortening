@@ -1,14 +1,15 @@
 <div id="container">
-    <div id="search">
-        <input type="text" placeholder="Shorten a link here..." [(ngModel)]="link" (keyup.enter)="showLink()">
-        <button type="submit">Shorten It!</button>
-    </div>
+    <form id="search">
+        <input id="input" type="text" name="link" placeholder="Shorten a link here..." [(ngModel)]="link">
+        <button type="submit" id="submit" (click)="getLinkValidation()">Shorten It!</button>
+    </form>
     <p id="alert">Please add a link</p>
 </div>
-<div *ngIf="shortLink" id="container-link">
-    <div class="cont-link">
-        <p>{{shortLink.original_link}}</p>
-        <p><a href="{{shortLink.full_short_link}}" target="_blank">{{shortLink.short_link}}</a></p>
-        <button>Copy</button>
+<button class="clear" (click)="clearLinks()">Clear Links</button>
+<div id="container-link">
+    <div class="cont-link" *ngFor="let i of shortLink">
+        <p>{{i.original_link}}</p>
+        <p><a class="copy{{i.code}}" href="{{i.full_short_link}}" target="_blank">{{i.short_link}}</a></p>
+        <button (click)="copyLink(i)">Copy</button>
     </div>
 </div>
