@@ -12,4 +12,22 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openMenu(){
+    var menu = document.getElementById('nav');
+    var login = document.getElementById('login');
+    if(menu != null){
+      if(menu.style.display == 'block'){
+        menu.style.display = 'none';
+      }else{
+        menu.style.display = 'block';
+      }
+    }
+    if(login != null){
+      if(login.style.display == 'flex'){
+        login.style.display = 'none';
+      }else{
+        login.style.display = 'flex';
+      }
+    }
+  }
 }

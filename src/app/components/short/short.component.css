@@ -1,0 +1,136 @@
+#container{
+    background: var(--Back);
+}
+#search{
+    margin: 0 6%;
+    height: 90px;
+    padding: 50px 3%;
+    background: var(--Dark-Violet);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#search #input{
+    width: 100%;
+    height: 40px;
+    padding: 10px 40px;
+    color: var(--Gray);
+    font-size: 22px;
+    border-radius: 15px;
+}
+#search #submit{
+    width: 250px;
+    font-size: 22px;
+    color: white;
+    background: var(--Cyan);
+    padding: 15px 40px;
+    border-radius: 15px;
+    margin-left: 40px;
+}
+#search #submit:hover{
+    opacity: 0.6;
+}
+#search #alert{
+    position: absolute;
+    margin-top: 100px;
+    color: var(--Red);
+    display: none;
+}
+
+#container-link{
+    margin: 0 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#container-link .clear{
+    width: 200px;
+    font-size: 19px;
+    color: white;
+    background: var(--Red);
+    padding: 10px 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    border: 1px solid red;
+    cursor: pointer;
+}
+#container-link .clear:hover{
+    opacity: 0.8;
+}
+.cont-link{
+    background: white;
+    width: 96%;
+    margin-top: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+.cont-link button{
+    font-size: 18px;
+    color: white;
+    background: var(--Cyan);
+    padding: 10px 20px;
+    margin-left: 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.cont-link button:hover{
+    opacity: 0.6;
+}
+.cont-link p{
+    font-size: 20px;
+    width: 100%;
+    overflow: scroll;
+}
+.cont-link a{
+    color: var(--Cyan);
+    margin-left: 20px;
+}
+
+/*Responsive styles*/
+@media (max-width: 800px) {
+    #search{
+        height: 110px; /**/
+        padding: 50px 5%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #search #input{
+        width: 70%;
+        font-size: 18px;
+    }
+    #search #submit{
+        width: 98%;
+        font-size: 20px;
+        padding: 10px 30px;
+        margin-left: 0;
+        margin-top: 40px;
+    }
+    #search #alert{
+        margin-top: -10px;
+        font-size: 15px;
+        align-self: flex-start;
+    }
+    .cont-link{
+        flex-wrap: wrap;
+    }
+    .cont-link p{
+        font-size: 19px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--Gray);
+    }
+    .cont-link a{
+        padding: 15px 0;
+        margin-left: 0;
+    }
+    .cont-link button{
+        width: 100%;
+        margin-left: 0;
+    }
+}

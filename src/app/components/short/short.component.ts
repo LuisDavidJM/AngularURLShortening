@@ -25,12 +25,12 @@ export class ShortComponent implements OnInit {
   getLink(){
     this.shortsService.getUrl(this.link).subscribe(
       result => {
-        this.shortLink.unshift(result.result);
-        localStorage.setItem('localStorage', JSON.stringify(this.shortLink));
-        this.getLocalStorage();
+            this.shortLink.unshift(result.result);
+            localStorage.setItem('localStorage', JSON.stringify(this.shortLink));
+            this.getLocalStorage();
       },
       error => {
-        console.log('<any>error');
+        alert('Invalid Link, Try Again');
       }
     );
     this.inputReset();
@@ -51,13 +51,17 @@ export class ShortComponent implements OnInit {
   }
   copyLink(num: any){
     var copy = document.querySelector(`.copy${num.code}`)?.innerHTML;
+    var copy_link = document.querySelector(`.copy_link${num.code}`) as HTMLElement | null; 
     if(copy != undefined){
       navigator.clipboard.writeText(copy)
     .then(() => {
-
+      if(copy_link != null){
+      copy_link.style.background = 'var(--Dark-Violet)'
+      copy_link.innerHTML = 'Copied!';
+      }
     })
     .catch(err => {
-      console.log('Error', err);
+      console.log('Copy Link Error, Try Again');
     });
     }
   }
@@ -69,13 +73,22 @@ export class ShortComponent implements OnInit {
 
   getLinkValidation(){
     var val: any = document.getElementById('input') as HTMLInputElement | null;
+    var alert = document.getElementById('input');
+    var alert_add = document.getElementById('alert');
     if(val != undefined){
       val = val.value;
     }
     if (val?.length > 0){
       this.getLink();
+      if(alert_add != null)
+      alert_add.style.display = 'none';
+      if(alert != null)
+      alert.style.border = 'none';
     }else{
-      console.log(val, 'Error')
+      if(alert_add != null)
+      alert_add.style.display = 'block';
+      if(alert != null)
+      alert.style.border = '3px solid var(--Red)';
     }
   }
 }

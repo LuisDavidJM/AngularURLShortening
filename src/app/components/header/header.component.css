@@ -1,3 +1,217 @@
+/*Navbar section*/
+#menu{
+    height: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 6%;
+}
+.nav-menu1,
+.nav-menu2{
+    display: none;
+}
+#nav{
+    width: 40%;
+}
+#nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+#nav ul li a{
+    color: var(--Gray);
+    font-weight: 700;
+}
+#nav ul li a:hover{
+    color: black;
+}
+#nav img{
+    height: 38px;
+}
+#login{
+    display: flex;
+    align-items: center;
+    padding-right: 6%;
+}
+#login .log{
+    color: var(--Gray);
+    margin-right: 40px;
+    font-weight: 700;
+}
+#login .log:hover{
+    color: black;
+}
+#login .sign{
+    color: white;
+    background: var(--Cyan);
+    padding: 8px 20px;
+    border-radius: 30px;
+}
+#login .sign:hover{
+    opacity: 0.6;
+}
+
+/*Banner section*/
+#banner{
+    display: flex;
+    margin-left: 6%;
+    margin-bottom: 100px;
+}
+#banner #title{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 50px;
+}
+#title h1{
+    font-size: 95px;
+    opacity: 0.8;
+}
+#title p{
+    font-size: 24px;
+    color: var(--Gray);
+}
+#title a{
+    font-size: 22px;
+    color: white;
+    background: var(--Cyan);
+    padding: 15px 40px;
+    border-radius: 50px;
+    margin-right: auto;
+    margin-top: 40px;
+}
+#title a:hover{
+    opacity: 0.6;
+}
+#banner #main-img{
+    width: 45%;
+    overflow: hidden;
+}
 #main-img img{
-    width: 100px;
+    width: 130%;
+}
+
+
+/*Responsive Styles*/
+@media (max-width: 1300px) {
+    #nav{
+        width: 50%;
+    }
+}
+@media (max-width: 1140px) {
+    #title h1{
+        font-size: 60px;
+    }
+}
+@media (max-width: 1000px) {
+    #nav{
+        width: 60%;
+    }
+}
+@media (max-width: 800px) {
+    #menu{
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-menu1{
+        display: block;
+    }
+    .nav-menu2{
+        display: block;
+        width: 30px;
+    }
+    #nav{
+        position: absolute;
+        display: none;
+        width: 90%;
+        background: var(--Dark-Violet);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-top: 250px;
+    }
+    #nav ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #nav ul li{
+        padding: 0 25%;
+        margin-top: 20px;
+    }
+    #nav ul .bot{
+        padding-bottom: 30px;
+        border-bottom: 1px solid var(--Gray);
+    }
+    #nav img{
+        display: none;
+    }
+    #login{
+        margin-top: 597px;
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 0;
+        position: absolute;
+        background: var(--Dark-Violet);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        display: none;
+    }
+    #login .log{
+        margin-right: 0;
+        margin-top: 20px;
+    }
+    #login .sign{
+        width: 70%;
+        margin-top: 25px;
+        margin-bottom: 40px;
+        padding: 8px 20px;
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    #banner{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+        margin: 0 auto;
+        margin-bottom: 100px;
+    }
+    #banner #title{
+        width: 90%;
+        margin: 0 6%;
+        margin-top: 30px;
+        text-align: center;
+        order: 2;
+    }
+    #title h1{
+        font-size: 45px;
+        margin: 0 20px;
+    }
+    #title p{
+        font-size: 20px;
+        margin: 0 20px;
+    }
+    #title a{
+        font-size: 22px;
+        color: white;
+        background: var(--Cyan);
+        padding: 15px 40px;
+        border-radius: 50px;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+    #banner #main-img{
+        margin-left: 6%;
+        width: 94%;
+        order: 1;
+        text-align: center;
+    }
+    #main-img img{
+        width: 500px;
+    }
 }

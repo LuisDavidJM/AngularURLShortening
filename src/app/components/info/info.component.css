@@ -1,0 +1,158 @@
+/*Cards section*/
+#container{
+    padding: 0 6%;
+    padding-top: 100px;
+    background: var(--Back);
+}
+#second-title{
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+}
+#second-title h2{
+    font-size: 50px;
+    color: black;
+    opacity: 0.8;
+}
+#second-title p{
+    color: var(--Gray);
+}
+
+#cards{
+    height: 400px;
+    margin-top: 140px;
+    padding-bottom: 140px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#cards .hr{
+    position: absolute;
+    z-index: 0;
+    width: 50%;
+    height: 10px;
+    background: var(--Cyan);
+    margin-top: calc(200px - 10px);
+}
+#cards .card{
+    width: 25%;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    min-height: 250px;
+    z-index: 1;
+}
+#cards .card-1{
+    align-self: flex-start;
+}
+#cards .card-2{
+    align-self: center;
+}
+#cards .card-3{
+    align-self: flex-end;
+}
+#cards .card .div-img{
+    width: 95px;
+    height: 95px;
+    background: var(--Dark-Violet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-top: -70px;
+    margin-bottom: 30px;
+}
+#cards .card img{
+    width: 42px;
+}
+#cards .card h3{
+    font-size: 23px;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+#cards .card p{
+    color: var(--Gray);
+}
+
+/*Boost section*/
+#boost{
+    width: 100%;
+    height: 300px;
+    background: var(--Dark-Violet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#boost #boost-img{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    z-index: 0;
+}
+#boost h2{
+    color: white;
+    font-size: 45px;
+    z-index: 1;
+}
+#boost a{
+    z-index: 1;
+    font-size: 22px;
+    color: white;
+    background: var(--Cyan);
+    padding: 15px 40px;
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+#boost a:hover{
+    opacity: 0.6;
+}
+
+/*Responsive styles*/
+@media (max-width: 1100px) {
+    #second-title{
+        width: 60%;
+    }
+
+    #cards{
+        height: 100%;
+        flex-direction: column;
+    }
+    #cards .hr{
+        height: 50%;
+        width: 10px;
+        margin-top: 0;
+    }
+    #cards .card{
+        align-self: center;
+        width: 90%;
+        margin: 35px 0;
+        min-height: 200px;
+    }
+}
+@media (max-width: 800px) {
+    #second-title{
+        width: 90%;
+    }
+    #second-title h2{
+        font-size: 40px;
+    }
+    #cards .card{
+        text-align: center;
+        margin: 45px 0;
+    }
+    #cards .hr{
+        height: 70%;
+    }
+    #cards .card .div-img{
+        margin: auto;
+        margin-top: -70px;
+        margin-bottom: 20px;
+    }
+    #boost h2{
+        color: white;
+        font-size: 30px;
+    }
+    
+}
