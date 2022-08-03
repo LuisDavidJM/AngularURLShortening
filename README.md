@@ -1,27 +1,55 @@
-# URLShortening
+# Angular URL Shortening
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+## Table of contents
 
-## Development server
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+- [Author](#author)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Overview
 
-## Code scaffolding
+This project is a Challenge obtained from the [Frontend Mentor](https://www.frontendmentor.io/) page.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### The challenge
 
-## Build
+Users should be able to:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- View the optimal layout for the site depending on their device's screen size
+- Shorten any valid URL
+- See a list of their shortened links, even after refreshing the browser
+- Copy the shortened link to their clipboard in a single click
+- Receive an error message when the form is submitted if:
+    - The input field is empty
 
-## Running unit tests
+### Screenshot
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![](./angular-url-shortening.png)
 
-## Running end-to-end tests
+## My process
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Built with
 
-## Further help
+- HTML
+- CSS
+- Angular framework
+- Typescript
+- API REST
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### What I learned
+
+In this page I learned to implement a complete project with angular, making use of components, services and the implementation of httpClient to subscribe to an api that contained the information to make the url shortening, I also learned to implement a form to put the link which contained a complete validation of the data.
+
+### Continued development
+
+Something that can be implemented in the future is to perform a login or registration to be able to save the links of several users, and integrate them into a database so that each user always knows which links they have previously used.
+
+## Author
+
+Luis David Jimenez Martinez
+- Portfolio - [www.luisdavidjm.com](https://www.luisdavidjm.com)
+- GitHub - [LuisDavidJM](https://github.com/LuisDavidJM)
